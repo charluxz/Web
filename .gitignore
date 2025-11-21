@@ -1,0 +1,7 @@
+# Ignorar archivos comunes
+.DS_Store
+Thumbs.db
+node_modules/
+dist/
+/.vscode/
+*.log
