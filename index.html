@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
+     <script src="forms.js"></script>
         <h1>
             Sopaipillas
         </h1>
@@ -49,12 +50,11 @@
             <br>
         </div>        
         <footer>
-                <form id="myForm" action="mailto:gabrielcarlosmolpe@gmail.com" method="post">
-                    <input type="email" placeholder="Correo electrónico" required name="email">
+                <form id="myForm" action="javascript:void(0)" method="post" onsubmit="procesar()">
+                    <input type="email" placeholder="Correo electrónico" required autofocus id="email">
                     <input type="submit" value="Suscribirse">
                 </form>
                 <br>
-                
             <p>
                 Al suscribirme acepto que me envíen mensualmente un correo con está receta de sopaipillas.
             </p>
