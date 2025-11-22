@@ -2,11 +2,13 @@ body{
     background-color: khaki;
 }
 h1 {
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
 } 
 footer p {
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,6 +19,7 @@ h2 {
   align-items: center;
 }
 li {
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,4 +29,8 @@ div p{
   justify-content: center;
   align-items: center;
   font-weight: bold;
+}
+.mainItems {
+  display: grid;
+  grid-template-columns: auto auto auto;
 }
