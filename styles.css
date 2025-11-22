@@ -1,0 +1,30 @@
+body{
+    background-color: khaki;
+}
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+footer p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 0, 0);
+}
+h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
