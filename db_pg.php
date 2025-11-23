@@ -7,7 +7,7 @@ function parse_database_url($url) {
     $parts = parse_url($url);
     if ($parts === false) return null;
     $result = [];
-    $result['host'] = $parts['host'] ?? '127.0.0.1';
+    $result['host'] = $parts['host'] ?? 'postgresql://user:password@host:port/dbname?sslmode=require';
     $result['port'] = $parts['port'] ?? 5432;
     $result['user'] = isset($parts['user']) ? rawurldecode($parts['user']) : null;
     $result['pass'] = isset($parts['pass']) ? rawurldecode($parts['pass']) : null;
