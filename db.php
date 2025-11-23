@@ -2,7 +2,7 @@
 // db.php - conexión a la base de datos usando MySQLi
 // Recomendación: no guardar credenciales en el repositorio. Usar variables de entorno.
 
-$DB_HOST = getenv('DB_HOST') ?: '127.0.0.1';
+$DB_HOST = getenv('DB_HOST') ?: '127.0.0.1'   ;
 $DB_USER = getenv('DB_USER') ?: 'root';
 $DB_PASS = getenv('DB_PASS') ?: '';
 $DB_NAME = getenv('DB_NAME') ?: 'web';
