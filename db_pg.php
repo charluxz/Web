@@ -2,12 +2,12 @@
 // db_pg.php - Conexión a PostgreSQL usando PDO.
 // Intenta leer la variable de entorno DATABASE_URL (formato URL de Postgres).
 // En su defecto, usa DB_HOST, DB_PORT, DB_NAME, DB_USER, DB_PASS.
-
+$env:DATABASE_URL = 'postgresql://user:password@host:port/dbname?sslmode=require'
 function parse_database_url($url) {
     $parts = parse_url($url);
     if ($parts === false) return null;
     $result = [];
-    $result['host'] = $parts['host'] ?? 'postgresql://user:password@host:port/dbname?sslmode=require';
+    $result['host'] = $parts['host'] ?? '127.0.0.1';
     $result['port'] = $parts['port'] ?? 5432;
     $result['user'] = isset($parts['user']) ? rawurldecode($parts['user']) : null;
     $result['pass'] = isset($parts['pass']) ? rawurldecode($parts['pass']) : null;
