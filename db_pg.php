@@ -2,7 +2,7 @@
 // db_pg.php - Conexión a PostgreSQL usando PDO.
 // Intenta leer la variable de entorno DATABASE_URL (formato URL de Postgres).
 // En su defecto, usa DB_HOST, DB_PORT, DB_NAME, DB_USER, DB_PASS.
-$env:DATABASE_URL = 'postgresql://user:password@host:port/dbname?sslmode=require'
+$env:DATABASE_URL = 'postgresql://neondb_owner:npg_SThO2IUPAr1y@ep-quiet-king-agx9lqbc-pooler.c-2.eu-central-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require'
 function parse_database_url($url) {
     $parts = parse_url($url);
     if ($parts === false) return null;
