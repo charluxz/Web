@@ -1,6 +1,35 @@
 body{
     font-family: sans-serif;
-    background-color: rgb(233, 224, 146);
+}
+header div{
+    text-align: center;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.theme-a {
+  background: #ddccaa;
+  color: #442c14;
+}
+@media (prefers-color-scheme: dark) {
+  .theme-a.adaptive {
+    background: #442c14;
+    color: #ddccbb;
+    outline: 5px dashed black;
+  }
+}
+.theme-b {
+  background: #444477;
+  color: #bbbbdd;
+}
+@media (prefers-color-scheme: light) {
+  .theme-b.adaptive {
+    background: #bbccdd;
+    color: #333344;
+    outline: 5px dotted black;
+  }
 }
 h1 {
   text-align: center;
