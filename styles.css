@@ -10,13 +10,13 @@ header div{
     margin-bottom: 10px;
 }
 .theme-a {
-  background: #ddccaa;
+  background: #cab385;
   color: #442c14;
 }
 @media (prefers-color-scheme: dark) {
   .theme-a.adaptive {
     background: #442c14;
-    color: #ddccbb;
+    color: #cab385;
     outline: 5px dashed black;
   }
 }
