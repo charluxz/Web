@@ -4,6 +4,8 @@
         <title>Sopaipillas</title>
         <link rel="stylesheet" type="text/css" href="static/styles.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://pyscript.net" />
+        <script defer src="https://pyscript.net"></script>
     </head>
     <body>
         <script src="script.js"></script>
@@ -59,21 +61,22 @@
         <form>
             <label for="email">Correo electrónico:</label>
             <input type="email" id="email" name="email" required placeholder="tu@ejemplo.com" />
-            <button type="submit" id="botonEjecutar">Suscribirse</button>
+            <button type="submit" py-click="enviarCorreo()">Suscribirse</button>
         </form>
-    <script>
-        document.getElementById('botonEjecutar').addEventListener('click', function() {
-            // Llama a la ruta de Flask usando el método POST
-            fetch('../envio.py', {
-                method: 'POST'
-            })
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById('resultado').innerText = data.mensaje;
-            })
-            .catch(error => console.error('Error:', error));
-        });
-    </script>
+    <!-- Código Python integrado -->
+    <py-script>
+        def enviarCorreo():
+            import resend
+            resend.api_key = "re_6LVBnd1c_H7D9nQRCTfrqy2AgMNWXvDbq"
+            correo = ""
+            r = resend.Emails.send({
+            "from": "onboarding@resend.dev",
+            "to": correo,
+            "subject": "Receta Sopaipillas",
+            "html": "<p></p>"
+})
+
+    </py-script>
                 <br>
             <p>
                 Al suscribirme acepto que me envíen mensualmente un correo con esta receta de sopaipillas.
