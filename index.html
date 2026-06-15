@@ -61,9 +61,6 @@
             <input type="email" id="email" name="email" required placeholder="tu@ejemplo.com" />
             <button type="submit">Suscribirse</button>
         </form>
-        <p>
-            <?php if (isset($_GET['m']) && $_GET['m'] === 'ok') { echo 'Gracias — correo guardado.'; } elseif (isset($_GET['e'])) { if ($_GET['e'] === 'invalid') { echo 'Correo inválido.'; } elseif ($_GET['e'] === 'exists') { echo 'Ese correo ya está suscrito.'; } else { echo 'Ocurrió un error, inténtalo más tarde.'; } } ?>
-        </p>
                 <br>
             <p>
                 Al suscribirme acepto que me envíen mensualmente un correo con esta receta de sopaipillas.
