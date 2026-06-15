@@ -1,10 +1,10 @@
 import resend
 import js
 
-def procesar_datos(self):
+def procesar_datos():
   email = js.document.getElementById("email").value
 
-def enviarCorreo(self):
+def enviarCorreo():
   import resend
   resend.api_key = "re_6LVBnd1c_H7D9nQRCTfrqy2AgMNWXvDbq"
   correo = "gabrielcarlosmolpe@gmail.com"
