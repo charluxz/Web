@@ -61,6 +61,19 @@
             <input type="email" id="email" name="email" required placeholder="tu@ejemplo.com" />
             <button type="submit">Suscribirse</button>
         </form>
+    <script>
+        document.getElementById('botonEjecutar').addEventListener('click', function() {
+            // Llama a la ruta de Flask usando el método POST
+            fetch('../envio.py', {
+                method: 'POST'
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('resultado').innerText = data.mensaje;
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
                 <br>
             <p>
                 Al suscribirme acepto que me envíen mensualmente un correo con esta receta de sopaipillas.
