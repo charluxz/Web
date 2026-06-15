@@ -1,5 +1,5 @@
 import resend
-from pyscript import js
+import js
 
 def procesar_datos(self):
   email = js.document.getElementById("email").value
