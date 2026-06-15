@@ -2,12 +2,12 @@ import resend
 from pyscript import js
 
 def procesar_datos(self):
-  self.email = js.document.getElementById("email").value
+  email = js.document.getElementById("email").value
 
 def enviarCorreo(self):
   import resend
   resend.api_key = "re_6LVBnd1c_H7D9nQRCTfrqy2AgMNWXvDbq"
-  correo = self.email
+  correo = procesar_datos().email
   r = resend.Emails.send({
   "from": "onboarding@resend.dev",
   "to": correo,
