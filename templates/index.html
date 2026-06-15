@@ -65,6 +65,12 @@
         </form>
     <!-- Código Python integrado -->
     <py-script>
+        from pyscript import js
+
+        def procesar_datos():
+            nombre = js.document.getElementById("nombre").value
+            email = js.document.getElementById("email").value
+
         def enviarCorreo():
             import resend
             resend.api_key = "re_6LVBnd1c_H7D9nQRCTfrqy2AgMNWXvDbq"
