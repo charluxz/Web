@@ -1,7 +1,4 @@
 import resend
-from secret import secreto
-
-resend.api_key = secreto
 
 r = resend.Emails.send({
   "from": "onboarding@resend.dev",
