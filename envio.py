@@ -1,11 +1,18 @@
 import resend
-resend.api_key = "re_6LVBnd1c_H7D9nQRCTfrqy2AgMNWXvDbq"
+from pyscript import js
 
-correo = "gabrielcarlosmolpe@gmail.com"
+def procesar_datos(self):
+  self.email = js.document.getElementById("email").value
 
-r = resend.Emails.send({
+def enviarCorreo(self):
+  import resend
+  resend.api_key = "re_6LVBnd1c_H7D9nQRCTfrqy2AgMNWXvDbq"
+  correo = self.email
+  r = resend.Emails.send({
   "from": "onboarding@resend.dev",
   "to": correo,
   "subject": "Receta Sopaipillas",
-  "html": "<p></p>"
-})
+  "html": "aaa"
+  })
+resend.api_key = "re_6LVBnd1c_H7D9nQRCTfrqy2AgMNWXvDbq"
+
