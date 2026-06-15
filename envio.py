@@ -1,13 +1,14 @@
 import resend
-import js
+import pythonmonkey as pm
 
 def procesar_datos():
-  email = js.document.getElementById("email").value
+  email = pm.eval('document.getElementById("email").value')
+  return email
 
 def enviarCorreo():
   import resend
   resend.api_key = "re_6LVBnd1c_H7D9nQRCTfrqy2AgMNWXvDbq"
-  correo = email
+  correo = procesar_datos()
   r = resend.Emails.send({
   "from": "onboarding@resend.dev",
   "to": correo,
@@ -16,4 +17,4 @@ def enviarCorreo():
   })
 resend.api_key = "re_6LVBnd1c_H7D9nQRCTfrqy2AgMNWXvDbq"
 
-enviarCorreo()
+print(procesar_datos())
