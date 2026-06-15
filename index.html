@@ -58,13 +58,7 @@
             <br>
         </div>        
         <footer>
-        <form>
-            <label for="email">Correo electrónico:</label>
-            <input type="email" id="email" name="email" required placeholder="tu@ejemplo.com" />
-            <button type="submit" py-click="enviarCorreo()">Suscribirse</button>
-        </form>
-    <!-- Código Python integrado -->
-    <script type="py">
+<script type="py">
         from pyscript import js
 
         def procesar_datos():
@@ -81,6 +75,11 @@
             "html": ""
 })
 </script>
+        <form>
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required placeholder="tu@ejemplo.com" />
+            <button type="submit" py-click="enviarCorreo()">Suscribirse</button>
+        </form>
                 <br>
             <p>
                 Al suscribirme acepto que me envíen mensualmente un correo con esta receta de sopaipillas.
