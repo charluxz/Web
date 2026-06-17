@@ -1,20 +1,25 @@
 import resend
-import pythonmonkey as pm
+import os
+from flask import Flask, jsonify
 
-def procesar_datos():
-  email = pm.eval('document.getElementById("email").value')
-  return email
+resend.api_key = os.environ["RESEND_API_KEY"]
 
-def enviarCorreo():
-  import resend
-  resend.api_key = "re_6LVBnd1c_H7D9nQRCTfrqy2AgMNWXvDbq"
-  correo = procesar_datos()
-  r = resend.Emails.send({
-  "from": "onboarding@resend.dev",
-  "to": correo,
-  "subject": "Receta Sopaipillas",
-  "html": "aaa"
-  })
-resend.api_key = "re_6LVBnd1c_H7D9nQRCTfrqy2AgMNWXvDbq"
+app = Flask(__name__)
 
-print(procesar_datos())
+
+@app.route("/")
+def index():
+    params: resend.Emails.SendParams = {
+        "from": "Acme <onboarding@resend.dev>",
+        "to": ["delivered@resend.dev"],
+        "subject": "hello world",
+        "html": "<strong>it works!</strong>",
+    }
+
+    r = resend.Emails.send(params)
+    return jsonify(r)
+
+if __name__ == "__main__":
+    app.run()
+
+print(index())
